@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Year 12 Software Engineering Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+
+  <!-- React -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <i class="fas fa-laptop-code"></i>
+    <span>Isabella Codes</span>
+  </div>
+
+  <h1>Web Development Portfolio</h1>
+  <h2>____________________________________________________________</h2>
+  <p>HTML · CSS · JavaScript · Weather APP</p>
+</header>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Portfolio content</h3>
+    <ul>
+      <li onclick="showPage('home')" class="active">Home</li>
+      <li onclick="showPage('about')">About Me</li>
+      <li onclick="showPage('html')">HTML – Module 1</li>
+      <li onclick="showPage('css')">CSS – Module 2</li>
+      <li onclick="showPage('js')">JavaScript – Module 3</li>
+      <li onclick="showPage('grok')">Grok Learning Achievements</li>
+      <li onclick="showPage('combat')">CodeCombat Achievements</li>
+      <li onclick="showPage('weather')">Weather App (API)</li>
+      <li onclick="showPage('contact')">Contact Me</li>
+      <li onclick="showPage('check')">Check List</li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- HOME -->
+    <section class="page active" id="home">
+      <section class="web">
+        <h1>Web Development</h1>
+        <div class="click">
+          <p>Choose an icon and challenge yourself with questions about each web technology.</p>
+        </div>
+
+        <div class="icon-grid">
+          <div class="icon-item">
+            <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" alt="HTML" data-popup="html">
+            <p>HTML</p>
+          </div>
+
+          <div class="icon-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS" data-popup="css">
+            <p>CSS</p>
+          </div>
+
+          <div class="icon-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" data-popup="js">
+            <p>JavaScript</p>
+          </div>
+        </div>
+
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <h2 id="popupTitle"></h2>
+            <p id="popupText"></p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="page" id="about">
+      <section class="about">
+        <div class="profile-img">
+          <img src="https://img.freepik.com/premium-vector/happy-young-girl-with-school-uniform_505024-1962.jpg" alt="Student">
+        </div>
+        <div>
+          <h1>About Me</h1>
+          <p><strong>Name:</strong> Isabella Rambao Molinares</p>
+          <p><strong>School:</strong> Cabramatta High School CHS</p>
+          <p><strong>Year:</strong> 12</p>
+          <p>
+            I am a dedicated HSC student with a strong interest in education and working with others.
+            I am motivated, responsible, and committed to personal growth and learning.
+            Through my studies, I have developed skills in communication, organisation, and teamwork.
+            I enjoy supporting others and approaching tasks with patience and a positive attitude.
+            I hope to continue developing these skills through further study within the field of education.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- HTML MODULE -->
+    <section class="page" id="html">
+      <section class="HTML">
+        <div class="Logo1">
+          <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" alt="HTML Logo">
+        </div>
+
+        <h1>HTML (HyperText Markup Language) – Module 1</h1>
+
+        <p><strong>What is HTML?</strong></p>
+        <p>HTML is the language used to create and structure webpages.</p>
+
+        <p><strong>How I used it:</strong></p>
+        <p>
+          I used HTML to structure the content of my project and create a clear layout.
+          By using headings, sections, text, and images, I ensured the information was organised and easy to navigate.
+        </p>
+
+        <p><strong>Challenges:</strong></p>
+        <p>
+          Structuring sections clearly was challenging at first.
+          Through testing and practice, I improved my understanding of webpage layout.
+        </p>
+
+        <div class="pros-consH">
+          <div>
+            <h3>Pros</h3>
+                <li><span><strong>Easy to learn and use –</strong></span>  simple syntax makes it beginner-friendly.</li>
+                <li><span><strong>Structures content clearly –</strong></span>  allows the user to easily read and navigate the website.</li>
+                <li><span><strong>Works in all browsers –</strong></span>  ensures your website is accessible to everyone.</li>
+                <li><span><strong>Supports multimedia –</strong></span>  you can add images, links, and videos.</li>
+          </div>
+          <div>
+            <h3>Cons</h3>
+                <li><span><strong>Limited styling –</strong></span>  HTML alone can’t make a site look visually appealing (you need CSS).</li>
+                <li><span><strong>No interactivity –</strong></span>  HTML cannot handle dynamic actions, like button clicks or animations (you need JavaScript).</li>
+                <li><span><strong>Static content –</strong></span>  changes to content require editing the HTML directly.</li>
+                <li><span><strong>Can be messy if not organised –</strong></span>  poorly structured HTML can confuse users and make maintenance difficult.</li>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- CSS MODULE -->
+    <section class="page" id="css">
+      <section class="CSS">
+        <div class="Logo1">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS Logo">
+        </div>
+
+        <h1>CSS (Cascading Style Sheets) – Module 2</h1>
+
+        <p><strong>What is CSS?</strong></p>
+        <p>CSS styles and formats HTML content.</p>
+
+        <p><strong>How I used it:</strong> </p>
+        <p>I used CSS to style my project and make it visually appealing for the user. By adding colors, fonts, spacing, and layouts, I improved
+            readability and user experience. CSS allowed me to control the look of sections, images, and icons, and create a consistent design 
+            throughout the website.</p>
+
+        <p><strong>Challenges:</strong> </p>
+        <p>One challenge I faced with CSS was aligning elements and controlling the layout. At first, it was difficult to make sections, images, and icons look 
+            organised and balanced. I overcame this by learning about Flexbox and grid layouts, which helped me structure my content neatly for the user.</p>
+
+
+        <div class="pros-consC">
+          <div>
+            <h3>Pros</h3>
+                <li><span><strong>Improves user experience –</strong></span>  makes the website visually appealing and readable.</li>
+                <li><span><strong>Controls layout and design –</strong></span>  spacing, colors, fonts, and alignment.</li>
+                <li><span><strong>Separation of content and style –</strong></span>  HTML handles structure, CSS handles appearance.</li>
+                <li><span><strong>Reusable styles –</strong></span>  one style can apply to multiple elements, saving time.</li>
+          </div>
+          <div>
+            <h3>Cons</h3>
+                <li><span><strong>Can be complex –</strong></span>  layouts, positioning, and responsiveness can be tricky to master.</li>
+                <li><span><strong>Browser differences –</strong></span>  some styles may look different on different browsers.</li>
+                <li><span><strong>Requires practice –</strong></span>  without proper knowledge, CSS can be messy and inconsistent.</li>
+                <li><span><strong>Dependent on HTML structure –</strong></span>  poorly written HTML can limit styling possibilities.</li>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    <section class="page" id="js">
+      <section class="JS">
+        <div class="Logo1">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JS Logo">
+        </div>
+
+        <h1>JavaScript – Module 3</h1>
+
+        <p><strong>What is JavaScript?</strong></p>
+        <p>JavaScript is a programming language used to add interactivity and dynamic behaviour to websites.</p>
+        
+        <p><strong>How I used it:</strong> </p>
+        <p>I used JavaScript to add interactivity to my project and improve the user experience. JavaScript allowed me to respond to user actions such as clicks 
+            and inputs, and to make the website more dynamic. This helped the website feel more engaging and functional for the user.</p>
+
+        <p><strong>Challenges:</strong> </p>
+        <p>One challenge I faced when using JavaScript was understanding how functions and events work together. At first, it was difficult to make the website 
+            respond correctly to user actions. I overcame this by testing my code, fixing errors, and practising with simple scripts.</p>
+
+        <div class="pros-consJ">
+          <div>
+            <h3>Pros</h3>
+                <li><span><strong>Adds interactivity –</strong></span>  responds to user actions like clicks and inputs.</li>
+                <li><span><strong>Improves user experience –</strong></span>  makes websites more engaging and dynamic</li>
+                <li><span><strong>Works with HTML and CSS –</strong></span>  enhances existing content and design.</li>
+                <li><span><strong>Widely supported –</strong></span>  works in all modern browsers.</li>
+          </div>
+          <div>
+            <h3>Cons</h3>
+                <li><span><strong>Can be difficult to learn –</strong></span>  requires logical thinking and problem-solving.</li>
+                <li><span><strong>Errors can break features –</strong></span>  small mistakes can stop scripts from working.</li>
+                <li><span><strong>Dependent on the browser –</strong></span>  performance can vary between devices.</li>
+                <li><span><strong>Requires careful testing –</strong></span>  to ensure a smooth experience for the user.</li>
+          </div>
+        </div>
+      </section>
+    </section>
+
+
+
+
+
+    <!-- GROK LEARNING -->
+<section class="page" id="grok">
+  <section class="grok">
+
+    <div class="grok-top">
+      <div class="grok-text">
+        <h1>Grok Learning Achievements</h1>
+
+        <p><strong>How did Grok Learning support my learning in web development?</strong></p>
+
+        <p>
+          Grok Learning helped me improve my coding skills for web development
+          by providing interactive lessons and practical challenges in HTML,
+          CSS, and JavaScript.
+        </p>
+
+        <p>
+          Through structured activities and problem-solving exercises,
+          I developed a stronger understanding of website structure,
+          styling techniques, and programming logic.
+        </p>
+
+        <p>
+          The platform allowed me to practise writing real code in a guided
+          environment, helping me build confidence and accuracy in my work.
+        </p>
+      </div>
+
+      <div class="grokicon">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSTIBQrI7BnymXG-xB6x7FYjzOzveXa4hrEg&s.png" alt="Grok Logo">
+      </div>
+    </div>
+
+    <!-- Skill Labels Grok -->
+    <div class="subgrok">
+      <div class="logh">HTML</div>
+      <div class="logc">CSS</div>
+      <div class="logj">JavaScript</div>
+    </div>
+
+    <!-- Certificates  Grok-->
+    <div class="grok-images">
+      <img id="grok-html-img-1" src="images/grok-html.png" alt="HTML Certificate 1">
+      <img id="grok-html-img-2" src="images/grok-html2.png" alt="HTML Certificate 2">
+
+      <img id="grok-css-img-1" src="images/grok-css.png" alt="CSS Certificate 1">
+      <img id="grok-css-img-2" src="images/grok-css2.png" alt="CSS Certificate 2">
+
+      <img id="grok-js-img-1" src="images/grok-js.png" alt="JavaScript Certificate">
+    </div>
+
+  </section>
+</section>
+
+
+
+    <!-- CODECOMBAT -->
+<section class="page" id="combat">
+  <section class="combat">
+
+    <div class="combat-top">
+      <div class="combat-text">
+        <h1>CodeCombat Achievements</h1>
+        <p><strong>How did CodeCombat support my learning in web development?</strong></p>
+        <p>
+          CodeCombat strengthened my foundation in web development by improving
+          my problem-solving skills and understanding of programming logic
+          through hands-on practice.
+        </p>
+        <p>
+          By writing real JavaScript to complete challenges, I developed stronger
+          confidence with syntax, functions, loops, and debugging — skills that
+          directly support building interactive and well-structured web applications.
+        </p>
+      </div>
+
+      <div class="combaticon">
+        <img src="https://orl.bc.ca/wp-content/uploads/2025/02/CodeCombat-Logo.png" alt="CodeCombat Logo">
+      </div>
+    </div>
+
+    <div class="subcombat">
+      <div class="loghc">Achievements</div>
+    </div>
+
+    <div class="combat-images">
+      <img id="combat-1-img-1" src="images/combat-1.png" alt="CodeCombat Certificate 1">
+      <img id="combat-2-img-2" src="images/combat-2.png" alt="CodeCombat Certificate 2">
+    </div>
+
+  </section>
+</section>
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- WEATHER APP-->
+    <section class="page" id="weather">
+      <section class="weather">
+        <div class="weather-img">
+          <img src="images/weatherapp.png" alt="Weather App">
+        </div>
+        <div>
+          <h1>Weather App (API) – Module 4</h1>
+          <h3>Plan your weekend trip with Clima!</h3>
+          <p>
+            Clima provides up-to-date weather information in a clear format,
+            helping users plan daily activities easily.
+          </p>
+          <h4>
+            <strong>Direct Link:</strong>
+            <a href="https://isabella-rgb.github.io/Clima/" target="_blank">
+              <span>Clima</span>
+            </a>
+            <i class="fa fa-sun"></i>
+          </h4>
+        </div>
+      </section>
+    </section>
+
+
+    <!-- CHECK LIST -->
+<section class="page" id="check">
+  <section class="web">
+    <div class="check">
+
+      <h1>Check List!!</h1>
+      <h4>Things to go through:</h4>
+
+      <label><input type="checkbox"> Challenge (Home Section)</label><br>
+      <label><input type="checkbox"> Get to Know Me – About Section</label><br>
+      <label><input type="checkbox"> HTML – Module 1</label><br>
+      <label><input type="checkbox"> CSS – Module 2</label><br>
+      <label><input type="checkbox"> JavaScript – Module 3</label><br>
+      <label><input type="checkbox"> Grok Learning Achievements</label><br>
+      <label><input type="checkbox"> CodeCombat Achievements</label><br>
+      <label><input type="checkbox"> Weather App (API)</label><br>
+      <label><input type="checkbox"> Contact Me Form</label><br>
+
+    </div>
+  </section>
+</section>
+
+
+    <!-- CONTACT -->
+    <section class="page" id="contact">
+      <h2>Contact Me</h2>
+      <div id="contact-root"></div>
+    </section>
+
+  </main>
+</div>
+
+
+
+<!-- REACT FORM -->
+<script type="text/babel">
+function ContactForm() {
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const [submitted, setSubmitted] = React.useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+    setName("");
+    setEmail("");
+    setMessage("");
+    setTimeout(() => setSubmitted(false), 4000);
+  };
+
+  return (
+    <div className="contact-form-container">
+      <form onSubmit={handleSubmit}>
+        <label>Name</label>
+        <input value={name} onChange={e => setName(e.target.value)} required />
+
+        <label>Email</label>
+        <input type="email" value={email} onChange={e => setEmail(e.target.value)} required />
+
+        <label>Message</label>
+        <textarea value={message} onChange={e => setMessage(e.target.value)} required />
+
+        <button type="submit">Send</button>
+      </form>
+
+      {submitted && <p className="thank-you-message">Thank you! Message sent.</p>}
+    </div>
+  );
+}
+
+ReactDOM.render(<ContactForm />, document.getElementById("contact-root"));
+</script>
+
+</body>
+</html>
